@@ -4,203 +4,227 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DUMA - Comunidade Criativa</title>
+    <meta name="description" content="Duma — comunidade de profissionais de marketing que entrega projetos com qualidade máxima. Conheça nossa equipe, serviços e entre em contato.">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #1a0000 0%, #330000 25%, #1a0000 50%, #ff6b35 75%, #ff8c42 100%);
-            min-height: 100vh;
-            color: white;
-            overflow-x: hidden;
-        }
-
-        header {
-            text-align: center;
-            padding: 60px 20px;
-            border-bottom: 2px solid #ff6b35;
-        }
-
-        header h1 {
-            font-size: 3rem;
-            color: #ff6b35;
-            margin-bottom: 10px;
-            letter-spacing: 2px;
-        }
-
-        header p {
-            font-size: 1.2rem;
-            color: #ccc;
-            letter-spacing: 3px;
-        }
-
-        .tagline {
-            margin-top: 20px;
-            font-size: 0.95rem;
-            color: #ff6b35;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-
-        .team-title {
-            text-align: center;
-            font-size: 2rem;
-            margin-bottom: 50px;
-            color: #ff6b35;
-        }
-
-        .team-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 40px;
-            padding: 20px;
-        }
-
-        .team-member {
-            text-align: center;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            border-radius: 10px;
-            overflow: hidden;
-            background: rgba(0, 0, 0, 0.3);
-            padding: 20px;
-        }
-
-        .team-member:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 10px 30px rgba(255, 107, 53, 0.3);
-        }
-
-        .team-member img {
-            width: 100%;
-            max-width: 250px;
-            height: 300px;
-            object-fit: cover;
-            border-radius: 8px;
-            margin-bottom: 20px;
-        }
-
-        .team-member h3 {
-            font-size: 1.5rem;
-            color: #ff6b35;
-            margin-bottom: 8px;
-            letter-spacing: 1px;
-        }
-
-        .team-member p {
-            font-size: 0.95rem;
-            color: #ddd;
-            letter-spacing: 0.5px;
-        }
-
-        footer {
-            text-align: center;
-            padding: 40px 20px;
-            border-top: 2px solid #ff6b35;
-            margin-top: 60px;
-        }
-
-        footer p {
-            color: #ff6b35;
-            font-size: 0.9rem;
-            letter-spacing: 1px;
-        }
-
-        @media (max-width: 768px) {
-            header h1 {
-                font-size: 2rem;
-            }
-
-            .team-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .team-member img {
-                max-width: 100%;
-            }
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: linear-gradient(135deg, #1a0000 0%, #330000 25%, #1a0000 50%, #ff6b35 75%, #ff8c42 100%); min-height: 100vh; color: white; overflow-x: hidden; }
+        a { color: inherit; text-decoration: none; }
+        header { text-align: center; padding: 60px 20px; border-bottom: 2px solid #ff6b35; }
+        header h1 { font-size: 2.4rem; color: #ff6b35; margin-bottom: 10px; letter-spacing: 2px; }
+        header p { font-size: 1rem; color: #ccc; letter-spacing: 2px; }
+        .tagline { margin-top: 12px; font-size: 0.95rem; color: #ff6b35; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
+        .hero { text-align: center; padding: 60px 20px; }
+        .hero h2 { font-size: 1.6rem; color: #fff; margin-bottom: 16px; }
+        .hero p { color: #eee; max-width: 900px; margin: 0 auto 20px; line-height: 1.6; }
+        .btn { display: inline-block; background: #ff6b35; color: #111; padding: 12px 20px; border-radius: 8px; font-weight: 700; transition: transform .15s ease; }
+        .btn:hover { transform: translateY(-3px); }
+        .section-title { text-align: center; font-size: 1.8rem; margin-bottom: 20px; color: #ff6b35; }
+        .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 28px; padding: 20px; }
+        .team-member { text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease; border-radius: 10px; overflow: hidden; background: rgba(0, 0, 0, 0.25); padding: 18px; }
+        .team-member:hover { transform: translateY(-8px); box-shadow: 0 10px 30px rgba(255, 107, 53, 0.25); }
+        .team-member img { width: 100%; max-width: 220px; height: 220px; object-fit: cover; border-radius: 8px; margin: 0 auto 12px; }
+        .team-member h3 { font-size: 1.1rem; color: #ff6b35; margin-bottom: 6px; }
+        .team-member p { font-size: 0.95rem; color: #ddd; }
+        .services-list { display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 12px; list-style: none; padding: 0 12px; }
+        .services-list li { background: rgba(0,0,0,0.2); padding: 12px; border-radius: 8px; color: #fff; }
+        .history { display:flex; gap:20px; align-items:center; flex-wrap:wrap; }
+        .history img { max-width:420px; width:100%; border-radius:8px; }
+        blockquote { font-style: italic; background: rgba(0,0,0,0.2); padding: 20px; border-left: 6px solid #ff6b35; border-radius:6px; }
+        .portfolio { text-align:center; }
+        .socials { display:flex; gap:12px; justify-content:center; margin-top:12px; }
+        footer { text-align: center; padding: 40px 20px; border-top: 2px solid #ff6b35; margin-top: 60px; }
+        footer p { color: #ff6b35; font-size: 0.9rem; letter-spacing: 1px; }
+        .contact-form { max-width:700px; margin: 0 auto; background: rgba(0,0,0,0.25); padding:20px; border-radius:8px; }
+        .form-row { display:flex; gap:12px; margin-bottom:10px; }
+        .form-row input, .form-row textarea { flex:1; padding:10px; border-radius:6px; border:1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.03); color:#fff; }
+        .form-row textarea { min-height:120px; resize:vertical; }
+        .note { font-size:0.85rem; color:#ddd; margin-top:6px; text-align:center; }
+        @media (max-width:768px){ header h1{ font-size:1.6rem; } .hero h2{ font-size:1.2rem; } .history{ flex-direction:column; } }
     </style>
 </head>
 <body>
     <header>
-        <h1>DUMA COMMUNITY</h1>
-        <p>FORMA, INFORMA, DA FORMA</p>
-        <div class="tagline">
-            <p>A comunidade que da forma ao Marketing no Brasil</p>
-        </div>
+        <h1>DUMA - A Comunidade</h1>
+        <p>Somos a Duma - A comunidade daqueles que se juntaram para entregar o melhor marketing do Brasil</p>
+        <div class="tagline"><p>Profissionais independentes unidos para entregar ideias e resultados com qualidade máxima.</p></div>
     </header>
 
-    <div class="container">
-        <h2 class="team-title">Nossa Equipe</h2>
-        
-        <div class="team-grid">
-            <!-- Robson Dezani -->
-            <div class="team-member">
-                <img src="./images/robson-dezani.jpg" alt="Robson Dezani">
-                <h3>Robson Dezani</h3>
-                <p>Diretor Criativo</p>
+    <main class="container">
+        <!-- Seção 1 - Hero -->
+        <section class="hero" id="home">
+            <h2>Somos a Duma - A comunidade daqueles que se juntaram para entregar o melhor marketing do Brasil</h2>
+            <p>Somos um grupo de profissionais independentes da área do marketing que se juntaram para criar a Duma, uma comunidade colaborativa que se propõe a entregar qualquer ideia, serviço ou produto com qualidade máxima.</p>
+            <p><a class="btn" href="https://wa.me/559999999999?text=Ol%C3%A1%20Duma%2C%20gostaria%20de%20falar%20com%20um%20especialista" target="_blank" rel="noopener">Fale com um especialista no WhatsApp</a></p>
+        </section>
+
+        <!-- Seção 2 - Nossa equipe -->
+        <section id="equipe">
+            <h2 class="section-title">Nossa equipe</h2>
+            <p style="text-align:center; color:#ddd; max-width:900px; margin:0 auto 18px">Nossa equipe é formada por Publicitários, Designers gráficos, Videomakers, Ilustradores, Animadores, Social Media, Marketeiros, Copy, Influenciadores, Fotógrafos e muitos outros. Conheça as lideranças do nosso time:</p>
+
+            <div class="team-grid">
+                <div class="team-member">
+                    <img src="./robson-dezani.jpg.png" alt="Robson Dezani">
+                    <h3>Robson</h3>
+                    <p>Diretor Criativo — Cuida do conteúdo gráfico dentro e fora das redes.</p>
+                </div>
+
+                <div class="team-member">
+                    <img src="./igor-richard.jpg.png" alt="Igor Richard">
+                    <h3>Igor</h3>
+                    <p>Diretor Audiovisual — Organiza a produção de vídeos em todos os formatos.</p>
+                </div>
+
+                <div class="team-member">
+                    <img src="./estela-freire.jpg" alt="Estela Freire">
+                    <h3>Estela</h3>
+                    <p>Diretora de Social Media — Planejamento estratégico de conteúdo.</p>
+                </div>
+
+                <div class="team-member">
+                    <img src="./bruno-henrique.jpg" alt="Bruno Henrique">
+                    <h3>Bruno</h3>
+                    <p>Diretor de Tecnologia — Organiza o desenvolvimento de Software.</p>
+                </div>
+
+                <div class="team-member">
+                    <img src="./gabriel-renato.jpg" alt="Gabriel Renato">
+                    <h3>Gabriel</h3>
+                    <p>Diretor Editorial — Roteiros, conteúdo e comunicação.</p>
+                </div>
+
+                <div class="team-member">
+                    <img src="./jeterson-santos.jpg" alt="Jeterson Santos">
+                    <h3>Jeterson</h3>
+                    <p>Diretor Operacional — Gestão de time, equipe e posicionamento.</p>
+                </div>
+
+                <div class="team-member">
+                    <img src="./sabrina-ribeiro.jpg" alt="Sabrina Ribeiro">
+                    <h3>Sabrina</h3>
+                    <p>Desenvolvedora / Suporte Técnico</p>
+                </div>
+
+                <div class="team-member">
+                    <img src="./itamar-barbosa.jpg" alt="Itamar Barbosa">
+                    <h3>Itamar</h3>
+                    <p>Diretor Comercial</p>
+                </div>
             </div>
 
-            <!-- Estela Freire -->
-            <div class="team-member">
-                <img src="./images/estela-freire.jpg" alt="Estela Freire">
-                <h3>Estela Freire</h3>
-                <p>Diretora de Social Media</p>
-            </div>
+            <p style="text-align:center; margin-top:18px; color:#ddd">Nossa equipe é composta por vários profissionais com especializações diferentes, prontos pra atender sua demanda agora mesmo!</p>
+            <p style="text-align:center; margin-top:12px"><a class="btn" href="#contato">Conta pra gente do que precisa</a></p>
+        </section>
 
-            <!-- Gabriel Renato -->
-            <div class="team-member">
-                <img src="./images/gabriel-renato.jpg" alt="Gabriel Renato">
-                <h3>Gabriel Renato</h3>
-                <p>Diretor Editorial</p>
-            </div>
+        <!-- Seção 3 - Serviços -->
+        <section id="servicos" style="margin-top:40px">
+            <h2 class="section-title">Alguns serviços que você pode encontrar com a gente</h2>
+            <ul class="services-list">
+                <li>Gestão de rede social</li>
+                <li>Creativos para campanhas</li>
+                <li>Edição de vídeo</li>
+                <li>Design de produtos</li>
+                <li>Criação de site ou aplicativo</li>
+                <li>Tráfego pago</li>
+                <li>Criar campanhas do absoluto zero</li>
+                <li>Branding e posicionamento de marca</li>
+                <li>Identidade visual</li>
+            </ul>
 
-            <!-- Jeterson Santos -->
-            <div class="team-member">
-                <img src="./images/jeterson-santos.jpg" alt="Jeterson Santos">
-                <h3>Jeterson Santos</h3>
-                <p>Fundador e Diretor Operacional</p>
-            </div>
+            <p style="text-align:center; color:#ddd; margin-top:16px; max-width:900px; margin-left:auto; margin-right:auto">Nossos serviços podem ser feitos por um ou vários profissionais preparados para garantir performance e resultado. Fala pra gente qual seu projeto e vamos desenhar uma forma de torná-lo ainda mais lucrativo.</p>
+            <p style="text-align:center; margin-top:12px"><a class="btn" href="#contato">Quero dar esse passo</a></p>
+        </section>
 
-            <!-- Sabrina Ribeiro -->
-            <div class="team-member">
-                <img src="./images/sabrina-ribeiro.jpg" alt="Sabrina Ribeiro">
-                <h3>Sabrina Ribeiro</h3>
-                <p>Desenvolvedora de Software</p>
+        <!-- Seção 4 - Nossa história -->
+        <section id="historia" style="margin-top:40px">
+            <h2 class="section-title">Nossa história</h2>
+            <div class="history">
+                <div style="flex:1; min-width:260px">
+                    <p style="color:#ddd; line-height:1.6">Fomos fundados para juntar todo o conhecimento do que há de melhor no marketing para fazer duas coisas principais: valorizar o pensamento humano capaz de pensar e criar projetos incríveis; e entregar essas ideias com a maior qualidade possível, juntando o que há de melhor no mercado. Hoje somos uma plataforma sólida tanto na entrega de conteúdo relevante quanto na execução eficiente, ajudando empresas, negócios, projetos e pessoas a atingirem seus objetivos.</p>
+                </div>
+                <div style="flex:1; min-width:260px">
+                    <!-- imagem institucional: usar jeterson caso não haja foto institucional -->
+                    <img src="./jeterson-santos.jpg" alt="Foto institucional Duma">
+                </div>
             </div>
+        </section>
 
-            <!-- Itamar Barbosa -->
-            <div class="team-member">
-                <img src="./images/itamar-barbosa.jpg" alt="Itamar Barbosa">
-                <h3>Itamar Barbosa</h3>
-                <p>Diretor Comercial</p>
-            </div>
+        <!-- Seção 5 - Mensagem do fundador -->
+        <section id="fundador" style="margin-top:40px">
+            <h2 class="section-title">Mensagem do fundador</h2>
+            <blockquote>
+                "Sou um entusiasta do pensamento humano, acredito que ideias valiosas merecem serem vistas e que todo ser humano é capaz de impactar o mundo quando se propõe a pensar e tem gente junto que acredita. É isso que construímos aqui na Duma."
+                <br><br>
+                <strong>Jeterson Santos</strong><br>
+                Fundador e Diretor Operacional da Duma.
+            </blockquote>
+        </section>
 
-            <!-- Bruno Henrique -->
-            <div class="team-member">
-                <img src="./images/bruno-henrique.jpg" alt="Bruno Henrique">
-                <h3>Bruno Henrique</h3>
-                <p>Diretor de Tecnologia</p>
-            </div>
+        <!-- Seção 6 - Portfólio -->
+        <section id="portfolio" style="margin-top:40px">
+            <h2 class="section-title">Conheça nosso trabalho mais de perto</h2>
+            <p style="text-align:center; color:#ddd; max-width:900px; margin:0 auto 12px">Se você quiser avaliar as dezenas de ações que fizemos e levaram ideias rumo aos seus objetivos, clique no botão abaixo e te enviaremos um panorama completo da nossa qualidade de execução e nosso serviço.</p>
+            <p style="text-align:center;"><a class="btn" href="mailto:contato@duma.com.br?subject=Quero%20ver%20o%20portf%C3%B3lio">Quero ver essas possibilidades</a></p>
+        </section>
 
-            <!-- Igor Richard -->
-            <div class="team-member">
-                <img src="./images/igor-richard.jpg" alt="Igor Richard">
-                <h3>Igor Richard</h3>
-                <p>Diretor de Audiovisual</p>
+        <!-- Seção 7 - Redes sociais -->
+        <section id="redes" style="margin-top:40px">
+            <h2 class="section-title">Nos acompanhe nas redes sociais</h2>
+            <p style="text-align:center; color:#ddd; margin-bottom:12px">Trazemos conteúdo atualizado todo dia pra te ajudar nessa jornada.</p>
+            <div class="socials">
+                <a class="btn" href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a>
+                <a class="btn" href="https://www.tiktok.com/" target="_blank" rel="noopener">TikTok</a>
+                <a class="btn" href="https://wa.me/559999999999" target="_blank" rel="noopener">WhatsApp</a>
             </div>
-        </div>
-    </div>
+        </section>
+
+        <!-- Contato / Formulário -->
+        <section id="contato" style="margin-top:40px">
+            <h2 class="section-title">Fale com a Duma</h2>
+            <p style="text-align:center; color:#ddd; max-width:900px; margin:0 auto 12px">Preencha o formulário abaixo ou clique no WhatsApp para falar diretamente com um especialista.</p>
+
+            <div class="contact-form">
+                <form id="contactForm" onsubmit="return sendMail();">
+                    <div class="form-row">
+                        <input type="text" id="name" placeholder="Seu nome" required>
+                        <input type="email" id="email" placeholder="Seu e-mail" required>
+                    </div>
+                    <div class="form-row">
+                        <input type="text" id="company" placeholder="Empresa (opcional)">
+                        <input type="text" id="phone" placeholder="Telefone / WhatsApp (opcional)">
+                    </div>
+                    <div class="form-row">
+                        <textarea id="message" placeholder="Conte pra gente do que precisa" required></textarea>
+                    </div>
+                    <div style="text-align:center; margin-top:8px">
+                        <button class="btn" type="submit">Enviar mensagem</button>
+                    </div>
+                    <p class="note">Obs: este formulário abre seu cliente de e-mail com os dados preenchidos. Substitua <strong>contato@duma.com.br</strong> pelo e-mail real no código se desejar envio direto por servidor.</p>
+                </form>
+            </div>
+        </section>
+
+    </main>
 
     <footer>
-        <p>© 2026 DUMA Community - Forma, Informa, da Forma</p>
+        <p>Duma - A plataforma que conecta pessoas e ideias e se importa com isso!</p>
+        <p style="font-size:0.8rem; color:#ddd; margin-top:8px">© 2026 DUMA Community</p>
     </footer>
+
+    <script>
+        function sendMail(){
+            var name = encodeURIComponent(document.getElementById('name').value);
+            var email = encodeURIComponent(document.getElementById('email').value);
+            var company = encodeURIComponent(document.getElementById('company').value);
+            var phone = encodeURIComponent(document.getElementById('phone').value);
+            var message = encodeURIComponent(document.getElementById('message').value);
+            var subject = encodeURIComponent('Contato pelo site: ' + name);
+            var body = 'Nome: ' + name + '\nEmail: ' + email + '\nEmpresa: ' + company + '\nTelefone: ' + phone + '\n\nMensagem:\n' + message;
+            var mailto = 'mailto:contato@duma.com.br?subject=' + subject + '&body=' + encodeURIComponent(body);
+            window.location.href = mailto;
+            return false; // prevent actual form submit
+        }
+    </script>
 </body>
 </html>
