@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DUMA - Comunidade Criativa</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #1a0000 0%, #330000 25%, #1a0000 50%, #ff6b35 75%, #ff8c42 100%);
+            min-height: 100vh;
+            color: white;
+            overflow-x: hidden;
+        }
+
+        header {
+            text-align: center;
+            padding: 60px 20px;
+            border-bottom: 2px solid #ff6b35;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            color: #ff6b35;
+            margin-bottom: 10px;
+            letter-spacing: 2px;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #ccc;
+            letter-spacing: 3px;
+        }
+
+        .tagline {
+            margin-top: 20px;
+            font-size: 0.95rem;
+            color: #ff6b35;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .team-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 50px;
+            color: #ff6b35;
+        }
+
+        .team-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            padding: 20px;
+        }
+
+        .team-member {
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border-radius: 10px;
+            overflow: hidden;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+        }
+
+        .team-member:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 30px rgba(255, 107, 53, 0.3);
+        }
+
+        .team-member img {
+            width: 100%;
+            max-width: 250px;
+            height: 300px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        .team-member h3 {
+            font-size: 1.5rem;
+            color: #ff6b35;
+            margin-bottom: 8px;
+            letter-spacing: 1px;
+        }
+
+        .team-member p {
+            font-size: 0.95rem;
+            color: #ddd;
+            letter-spacing: 0.5px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            border-top: 2px solid #ff6b35;
+            margin-top: 60px;
+        }
+
+        footer p {
+            color: #ff6b35;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .team-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .team-member img {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>DUMA COMMUNITY</h1>
+        <p>FORMA, INFORMA, DA FORMA</p>
+        <div class="tagline">
+            <p>A comunidade que da forma ao Marketing no Brasil</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <h2 class="team-title">Nossa Equipe</h2>
+        
+        <div class="team-grid">
+            <!-- Robson Dezani -->
+            <div class="team-member">
+                <img src="./images/robson-dezani.jpg" alt="Robson Dezani">
+                <h3>Robson Dezani</h3>
+                <p>Diretor Criativo</p>
+            </div>
+
+            <!-- Estela Freire -->
+            <div class="team-member">
+                <img src="./images/estela-freire.jpg" alt="Estela Freire">
+                <h3>Estela Freire</h3>
+                <p>Diretora de Social Media</p>
+            </div>
+
+            <!-- Gabriel Renato -->
+            <div class="team-member">
+                <img src="./images/gabriel-renato.jpg" alt="Gabriel Renato">
+                <h3>Gabriel Renato</h3>
+                <p>Diretor Editorial</p>
+            </div>
+
+            <!-- Jeterson Santos -->
+            <div class="team-member">
+                <img src="./images/jeterson-santos.jpg" alt="Jeterson Santos">
+                <h3>Jeterson Santos</h3>
+                <p>Fundador e Diretor Operacional</p>
+            </div>
+
+            <!-- Sabrina Ribeiro -->
+            <div class="team-member">
+                <img src="./images/sabrina-ribeiro.jpg" alt="Sabrina Ribeiro">
+                <h3>Sabrina Ribeiro</h3>
+                <p>Desenvolvedora de Software</p>
+            </div>
+
+            <!-- Itamar Barbosa -->
+            <div class="team-member">
+                <img src="./images/itamar-barbosa.jpg" alt="Itamar Barbosa">
+                <h3>Itamar Barbosa</h3>
+                <p>Diretor Comercial</p>
+            </div>
+
+            <!-- Bruno Henrique -->
+            <div class="team-member">
+                <img src="./images/bruno-henrique.jpg" alt="Bruno Henrique">
+                <h3>Bruno Henrique</h3>
+                <p>Diretor de Tecnologia</p>
+            </div>
+
+            <!-- Igor Richard -->
+            <div class="team-member">
+                <img src="./images/igor-richard.jpg" alt="Igor Richard">
+                <h3>Igor Richard</h3>
+                <p>Diretor de Audiovisual</p>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2024 DUMA Community - Forma, Informa, da Forma</p>
+    </footer>
+</body>
+</html>
