@@ -29,7 +29,16 @@ Site da equipe DUMA Community - "Forma, Informa, da Forma"
 ## 🚀 Como Usar
 
 1. Clone o repositório
-2. Adicione as fotos na pasta `images/`
+2. Adicione as fotos na pasta `images/` com os seguintes nomes:
+   - robson-dezani.jpg
+   - estela-freire.jpg
+   - gabriel-renato.jpg
+   - jeterson-santos.jpg
+   - sabrina-ribeiro.jpg
+   - itamar-barbosa.jpg
+   - bruno-henrique.jpg
+   - igor-richard.jpg
+
 3. Abra `index.html` no navegador
 
 ## 📱 Responsivo
@@ -38,4 +47,4 @@ O site é totalmente responsivo e funciona em mobile, tablet e desktop.
 
 ---
 
-© 2024 DUMA Community
+© 2026 DUMA Community
