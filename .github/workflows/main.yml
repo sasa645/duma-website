@@ -1,0 +1,22 @@
+name: Deploy Static Site
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+    runs-on: codebuild-dumacriatividade1-${{ github.run_id }}-${{ github.run_attempt }}
+    
+    steps:
+    - uses: actions/checkout@v4
+      
+    - name: Deploy to S3
+      run: |
+        echo "Starting deployment of static site..."
+        aws s3 sync . s3://duma.criatividade-916178183343-us-east-2-an \
+          --delete \
+          --exclude ".git/*" \
+          --exclude ".github/*" \
+          --exclude "README.md"
+        echo "✅ Static site deployed successfully!"
