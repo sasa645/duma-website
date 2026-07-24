@@ -1,0 +1,40 @@
+/* ===== PALETA DE CORES DO FUNDADOR ===== */
+:root {
+  --cor-primaria: #4E1212;
+  --cor-secundaria: #9E2A12;
+  --cor-escura: #1B0D0D;
+  --cor-escura-alt: #1B0F0F;
+  --cor-accent: #400E0F;
+  --cor-texto-claro: #ffffff;
+  --cor-texto-escuro: #1B0D0D;
+}
+
+.header, .navbar {
+  background-color: var(--cor-primaria);
+  color: var(--cor-texto-claro);
+}
+
+.hero {
+  background: linear-gradient(135deg, var(--cor-primaria), var(--cor-secundaria));
+  color: var(--cor-texto-claro);
+}
+
+.btn-primary, .cta-button {
+  background-color: var(--cor-secundaria);
+  color: var(--cor-texto-claro);
+  border: 2px solid var(--cor-secundaria);
+}
+
+.btn-primary:hover, .cta-button:hover {
+  background-color: var(--cor-primaria);
+  border-color: var(--cor-primaria);
+}
+
+h1, h2, h3 {
+  color: var(--cor-primaria);
+}
+
+.footer {
+  background-color: var(--cor-escura);
+  color: var(--cor-texto-claro);
+}
