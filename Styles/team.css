@@ -1,0 +1,104 @@
+/* ===== SEÇÃO DA EQUIPE ===== */
+.team-scroll {
+  display: flex;
+  gap: 24px;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 20px 0;
+  margin-bottom: 60px;
+}
+
+.team-scroll::-webkit-scrollbar {
+  height: 8px;
+}
+
+.team-scroll::-webkit-scrollbar-track {
+  background: var(--ink-2);
+  border-radius: 4px;
+}
+
+.team-scroll::-webkit-scrollbar-thumb {
+  background: var(--coral);
+  border-radius: 4px;
+}
+
+.team-card {
+  scroll-snap-align: start;
+  flex: 0 0 260px;
+  background: var(--ink-2);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 22px;
+  transition: transform .2s ease, border-color .2s ease;
+  text-align: center;
+}
+
+.team-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--coral);
+}
+
+/* ===== FOTOS DA EQUIPE ===== */
+.team-photo {
+  width: 80px;
+  height: 80px;
+  border-radius: 16px;
+  object-fit: cover;
+  margin: 0 auto 18px;
+  border: 3px solid var(--coral);
+  transition: transform 0.3s ease;
+}
+
+.team-card:hover .team-photo {
+  transform: scale(1.05);
+}
+
+/* ===== CONTEÚDO DOS CARDS ===== */
+.team-card h3 {
+  color: var(--paper);
+  margin-bottom: 8px;
+}
+
+.team-card .role {
+  color: var(--coral);
+  font-weight: 600;
+  font-size: 0.9rem;
+  margin-bottom: 12px;
+}
+
+.team-card p {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+/* ===== OUTRO DA EQUIPE ===== */
+.team-outro {
+  text-align: center;
+  max-width: 50ch;
+  margin: 0 auto;
+}
+
+.team-outro p {
+  margin-bottom: 24px;
+}
+
+/* ===== RESPONSIVIDADE DA EQUIPE ===== */
+@media (max-width: 768px) {
+  .team-scroll {
+    gap: 16px;
+    padding: 16px 0;
+    margin-bottom: 40px;
+  }
+  
+  .team-card {
+    flex: 0 0 220px;
+    padding: 18px;
+  }
+  
+  .team-photo {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 14px;
+  }
+}
