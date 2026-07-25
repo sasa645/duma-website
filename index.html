@@ -1,230 +1,851 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DUMA - Comunidade Criativa</title>
-    <meta name="description" content="Duma — comunidade de profissionais de marketing que entrega projetos com qualidade máxima. Conheça nossa equipe, serviços e entre em contato.">
-    <style>
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: linear-gradient(135deg, #1a0000 0%, #330000 25%, #1a0000 50%, #ff6b35 75%, #ff8c42 100%); min-height: 100vh; color: white; overflow-x: hidden; }
-        a { color: inherit; text-decoration: none; }
-        header { text-align: center; padding: 60px 20px; border-bottom: 2px solid #ff6b35; }
-        header h1 { font-size: 2.4rem; color: #ff6b35; margin-bottom: 10px; letter-spacing: 2px; }
-        header p { font-size: 1rem; color: #ccc; letter-spacing: 2px; }
-        .tagline { margin-top: 12px; font-size: 0.95rem; color: #ff6b35; }
-        .container { max-width: 1200px; margin: 0 auto; padding: 40px 20px; }
-        .hero { text-align: center; padding: 60px 20px; }
-        .hero h2 { font-size: 1.6rem; color: #fff; margin-bottom: 16px; }
-        .hero p { color: #eee; max-width: 900px; margin: 0 auto 20px; line-height: 1.6; }
-        .btn { display: inline-block; background: #ff6b35; color: #111; padding: 12px 20px; border-radius: 8px; font-weight: 700; transition: transform .15s ease; }
-        .btn:hover { transform: translateY(-3px); }
-        .section-title { text-align: center; font-size: 1.8rem; margin-bottom: 20px; color: #ff6b35; }
-        .team-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 28px; padding: 20px; }
-        .team-member { text-align: center; transition: transform 0.3s ease, box-shadow 0.3s ease; border-radius: 10px; overflow: hidden; background: rgba(0, 0, 0, 0.25); padding: 18px; }
-        .team-member:hover { transform: translateY(-8px); box-shadow: 0 10px 30px rgba(255, 107, 53, 0.25); }
-        .team-member img { width: 100%; max-width: 220px; height: 220px; object-fit: cover; border-radius: 8px; margin: 0 auto 12px; }
-        .team-member h3 { font-size: 1.1rem; color: #ff6b35; margin-bottom: 6px; }
-        .team-member p { font-size: 0.95rem; color: #ddd; }
-        .services-list { display: grid; grid-template-columns: repeat(auto-fit,minmax(220px,1fr)); gap: 12px; list-style: none; padding: 0 12px; }
-        .services-list li { background: rgba(0,0,0,0.2); padding: 12px; border-radius: 8px; color: #fff; }
-        .history { display:flex; gap:20px; align-items:center; flex-wrap:wrap; }
-        .history img { max-width:420px; width:100%; border-radius:8px; }
-        blockquote { font-style: italic; background: rgba(0,0,0,0.2); padding: 20px; border-left: 6px solid #ff6b35; border-radius:6px; }
-        .portfolio { text-align:center; }
-        .socials { display:flex; gap:12px; justify-content:center; margin-top:12px; }
-        footer { text-align: center; padding: 40px 20px; border-top: 2px solid #ff6b35; margin-top: 60px; }
-        footer p { color: #ff6b35; font-size: 0.9rem; letter-spacing: 1px; }
-        .contact-form { max-width:700px; margin: 0 auto; background: rgba(0,0,0,0.25); padding:20px; border-radius:8px; }
-        .form-row { display:flex; gap:12px; margin-bottom:10px; }
-        .form-row input, .form-row textarea { flex:1; padding:10px; border-radius:6px; border:1px solid rgba(255,255,255,0.12); background: rgba(255,255,255,0.03); color:#fff; }
-        .form-row textarea { min-height:120px; resize:vertical; }
-        .note { font-size:0.85rem; color:#ddd; margin-top:6px; text-align:center; }
-        @media (max-width:768px){ header h1{ font-size:1.6rem; } .hero h2{ font-size:1.2rem; } .history{ flex-direction:column; } }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Duma - A comunidade do melhor marketing do Brasil</title>
+  
+<!-- CSS Files -->
+<link rel="stylesheet" href="Styles/main.css">
+<link rel="stylesheet" href="Styles/team.css">
+<link rel="stylesheet" href="Styles/paleta.css">
+
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
+
+<style>
+  :root{
+    --ink:#161220;
+    --ink-2:#1f1a2c;
+    --paper:#f6f1e6;
+    --paper-dim:#cfc7b8;
+    --coral:#ef4a75;
+    --gold:#f2b632;
+    --teal:#1f8f83;
+    --line: rgba(246,241,230,0.14);
+    --radius: 18px;
+    --maxw: 1180px;
+    --ff-display: "Bricolage Grotesque", sans-serif;
+    --ff-body: "Instrument Sans", sans-serif;
+    --ff-mono: "Space Mono", monospace;
+  }
+
+<!-- Seção - Contato WhatsApp + Formulário -->
+<section id="contato" style="background: var(--ink-2);">
+  <div class="wrap">
+    <div class="section-head" style="text-align: center;">
+      <div class="eyebrow">Fale Conosco</div>
+      <h2>Vamos Conversar Sobre Seu Projeto</h2>
+      <p>Escolha a forma mais conveniente para entrar em contato conosco. Estamos prontos para transformar suas ideias em realidade!</p>
+    </div>
+
+    <div class="contact-grid">
+      
+      <!-- WhatsApp Card -->
+      <div class="contact-card whatsapp-card">
+        <div class="contact-icon">📱</div>
+        <h3>WhatsApp Direto</h3>
+        <p>Resposta rápida e atendimento personalizado para seu projeto.</p>
+        <a href="https://wa.me/message/6BVRXSLOXBSWK1" target="_blank" class="btn btn-whatsapp">
+          Chamar no WhatsApp
+        </a>
+        <div class="contact-info">
+          <small>Horário: Segunda a Sexta, 9h às 18h</small>
+        </div>
+      </div>
+
+      <!-- Formulário Card -->
+      <div class="contact-card form-card">
+        <div class="contact-icon">✉️</div>
+        <h3>Formulário de Contato</h3>
+        <p>Descreva seu projeto detalhadamente e retornaremos em breve.</p>
+        
+        <form class="contact-form" action="#" method="POST">
+          <div class="form-group">
+            <input type="text" name="nome" placeholder="Seu nome completo" required>
+          </div>
+          
+          <div class="form-group">
+            <input type="email" name="email" placeholder="Seu melhor e-mail" required>
+          </div>
+          
+          <div class="form-group">
+            <input type="tel" name="telefone" placeholder="WhatsApp (opcional)">
+          </div>
+          
+          <div class="form-group">
+            <select name="servico" required>
+              <option value="">Que tipo de projeto você tem?</option>
+              <option value="branding">Identidade Visual / Branding</option>
+              <option value="social-media">Social Media</option>
+              <option value="video">Produção de Vídeo</option>
+              <option value="website">Website / E-commerce</option>
+              <option value="marketing">Marketing Digital</option>
+              <option value="outro">Outro projeto</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <textarea name="mensagem" placeholder="Conte mais sobre seu projeto, objetivos e prazos..." rows="4" required></textarea>
+          </div>
+          
+          <button type="submit" class="btn btn-primary btn-full">
+            Enviar Mensagem
+          </button>
+        </form>
+      </div>
+
+    </div>
+
+    <!-- Outras formas de contato -->
+    <div class="contact-extras">
+      <div class="contact-item">
+        <strong>📧 E-mail:</strong>
+        <a href="mailto:contato@dumaagencia.com">contato@dumaagencia.com</a>
+      </div>
+      
+      <div class="contact-item">
+        <strong>📍 Localização:</strong>
+        <span>Atendimento em todo Brasil (remoto)</span>
+      </div>
+      
+      <div class="contact-item social-links">
+        <strong>🌐 Redes Sociais:</strong>
+        <a href="https://instagram.com/dumaagencia" target="_blank">Instagram</a>
+        <a href="https://twitter.com/dumaagencia" target="_blank">Twitter</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+  /* WhatsApp Button */
+  .whatsapp-btn {
+    background: #25D366;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+  }
+
+  .whatsapp-btn:hover {
+    background: #128C7E;
+    transform: scale(1.05);
+  }
+
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+
+<script>
+// Formulário para WhatsApp
+document.getElementById('whatsappForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  
+  // Pegar os valores dos campos
+  const nome = document.getElementById('nome').value;
+  const email = document.getElementById('email').value;
+  const telefone = document.getElementById('telefone').value;
+  const servico = document.getElementById('servico').value;
+  const mensagem = document.getElementById('mensagem').value;
+  
+  // Montar a mensagem para WhatsApp
+  let textoWhatsApp = `🎯 *NOVO CONTATO - DUMA AGÊNCIA*%0A%0A`;
+  textoWhatsApp += `👤 *Nome:* ${nome}%0A`;
+  textoWhatsApp += `📧 *E-mail:* ${email}%0A`;
+  
+  if (telefone) {
+    textoWhatsApp += `📱 *WhatsApp:* ${telefone}%0A`;
+  }
+  
+  textoWhatsApp += `🎨 *Tipo de Projeto:* ${servico}%0A%0A`;
+  textoWhatsApp += `💬 *Mensagem:*%0A${mensagem}%0A%0A`;
+  textoWhatsApp += `----%0AEnviado pelo site da Duma`;
+  
+  // Abrir WhatsApp com a mensagem
+  const urlWhatsApp = `https://wa.me/message/6BVRXSLOXBSWK1?text=${textoWhatsApp}`;
+  window.open(urlWhatsApp, '_blank');
+  
+  // Limpar formulário após envio
+  document.getElementById('whatsappForm').reset();
+  
+  // Mostrar mensagem de sucesso (opcional)
+  alert('Redirecionando para o WhatsApp! 📱');
+});
+</script>
+
+  body{
+    margin:0;
+    background:var(--ink);
+    color:var(--paper);
+    font-family:var(--ff-body);
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  img,svg{display:block;max-width:100%;}
+  a{color:inherit;}
+  h1,h2,h3{font-family:var(--ff-display);margin:0;letter-spacing:-0.01em;}
+  p{margin:0;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px;}
+  .eyebrow{
+    font-family:var(--ff-mono);
+    font-size:0.72rem;
+    text-transform:uppercase;
+    letter-spacing:0.16em;
+    color:var(--paper-dim);
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+  }
+  .eyebrow::before{
+    content:"";
+    width:7px;height:7px;border-radius:2px;
+    background:var(--coral);
+    display:inline-block;
+    transform:rotate(45deg);
+  }
+  section{padding:96px 0;position:relative;}
+  @media (max-width:720px){ section{padding:64px 0;} .wrap{padding:0 20px;} }
+
+  :focus-visible{outline:2px solid var(--gold);outline-offset:3px;}
+
+  /* ---------- BUTTONS ---------- */
+  .btn{
+    font-family:var(--ff-body);
+    font-weight:600;
+    font-size:0.98rem;
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    padding:15px 26px;
+    border-radius:999px;
+    border:none;
+    cursor:pointer;
+    text-decoration:none;
+    transition:transform .18s ease, box-shadow .18s ease;
+  }
+  .btn:hover{transform:translateY(-2px);}
+  .btn-primary{
+    background:var(--coral);
+    color:#1a0e14;
+    box-shadow:0 10px 30px -10px rgba(239,74,117,0.6);
+  }
+  .btn-primary:hover{box-shadow:0 14px 34px -8px rgba(239,74,117,0.75);}
+  .btn-ghost{
+    background:transparent;
+    color:var(--paper);
+    border:1px solid var(--line);
+  }
+  .btn-ghost:hover{border-color:var(--gold);}
+
+  /* ---------- NAV ---------- */
+  header.site{
+    position:sticky;top:0;z-index:50;
+    background:rgba(22,18,32,0.82);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  header.site .wrap{
+    display:flex;align-items:center;justify-content:space-between;
+    padding-top:18px;padding-bottom:18px;
+  }
+  .logo{
+    font-family:var(--ff-display);
+    font-weight:700;
+    font-size:1.35rem;
+    letter-spacing:-0.02em;
+  }
+  .logo span{color:var(--coral);}
+  nav.links{display:flex;gap:28px;font-size:0.92rem;}
+  nav.links a{text-decoration:none;color:var(--paper-dim);transition:color .15s;}
+  nav.links a:hover{color:var(--paper);}
+  @media (max-width:780px){ nav.links{display:none;} }
+
+  /* ---------- HERO ---------- */
+  .hero{padding-top:88px;padding-bottom:60px;overflow:hidden;}
+  .hero .wrap{
+    display:grid;
+    grid-template-columns:1.05fr 0.95fr;
+    gap:56px;
+    align-items:center;
+  }
+  @media (max-width:940px){ .hero .wrap{grid-template-columns:1fr;} }
+
+  .hero h1{
+    font-size:clamp(2.3rem, 4.4vw, 3.6rem);
+    font-weight:700;
+    line-height:1.06;
+    margin:20px 0 24px;
+  }
+  .hero h1 em{
+    font-style:normal;
+    color:var(--coral);
+  }
+  .hero p.lead{
+    font-size:1.08rem;
+    color:var(--paper-dim);
+    max-width:52ch;
+    margin-bottom:34px;
+  }
+
+  /* ---------- TEAM ---------- */
+  .section-head{max-width:640px;margin-bottom:44px;}
+  .section-head h2{font-size:clamp(1.7rem,3vw,2.4rem);margin-top:16px;}
+  .section-head p{color:var(--paper-dim);margin-top:16px;font-size:1.02rem;}
+
+  .team-scroll{
+    display:flex;gap:20px;overflow-x:auto;padding:6px 2px 26px;
+    scroll-snap-type:x proximity;
+    -ms-overflow-style:none; scrollbar-width:thin;
+  }
+  .team-card{
+    scroll-snap-align:start;
+    flex:0 0 260px;
+    background:var(--ink-2);
+    border:1px solid var(--line);
+    border-radius:var(--radius);
+    padding:22px;
+    transition:transform .2s ease, border-color .2s ease;
+    text-align: center;
+  }
+  .team-card:hover{transform:translateY(-6px);border-color:var(--gold);}
+  
+  .team-photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 16px;
+    object-fit: cover;
+    margin: 0 auto 18px;
+    border: 3px solid var(--coral);
+    transition: transform 0.3s ease;
+  }
+  
+  .team-card:hover .team-photo {
+    transform: scale(1.05);
+  }
+  
+  .team-card h3{font-size:1.12rem;}
+  .team-card .role{
+    font-family:var(--ff-mono);font-size:0.7rem;text-transform:uppercase;
+    letter-spacing:0.08em;color:var(--coral);margin:8px 0 12px;
+  }
+  .team-card p{color:var(--paper-dim);font-size:0.92rem;}
+
+  .team-outro{
+    display:flex;align-items:center;justify-content:space-between;
+    gap:24px;flex-wrap:wrap;
+    margin-top:32px;padding-top:32px;border-top:1px solid var(--line);
+  }
+  .team-outro p{max-width:46ch;color:var(--paper-dim);}
+
+<!-- Seção - Identidade Visual com Background -->
+<section class="paleta-section" style="background-image: url('images/paleta-cores.jpg'); background-size: cover; background-position: center; background-attachment: fixed; position: relative; min-height: 400px;">
+  
+  <!-- Overlay escuro para melhor legibilidade -->
+  <div style="background: rgba(22,18,32,0.75); backdrop-filter: blur(2px); padding: 100px 0; position: relative; z-index: 2;">
+    <div class="wrap">
+      <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+        
+        <div class="eyebrow" style="color: var(--paper);">Nossa Identidade</div>
+        <h2 style="color: var(--paper); font-size: clamp(2rem, 4vw, 3rem); margin: 20px 0;">Cores que Definem Nossa Essência</h2>
+        <p style="color: var(--paper-dim); font-size: 1.1rem; line-height: 1.6;">
+          Cada cor em nossa paleta representa um aspecto da nossa filosofia: criatividade, inovação, confiança e resultados excepcionais.
+        </p>
+        
+        <div style="margin-top: 40px;">
+          <a href="https://wa.me/message/6BVRXSLOXBSWK1" target="_blank" class="btn btn-primary">
+            Vamos Criar Juntos
+          </a>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+  <!-- Efeito de gradiente nas bordas -->
+  <div style="position: absolute; top: 0; left: 0; right: 0; height: 50px; background: linear-gradient(to bottom, var(--ink), transparent); z-index: 1;"></div>
+  <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 50px; background: linear-gradient(to top, var(--ink), transparent); z-index: 1;"></div>
+  
+</section>
+
+
+
+  /* ---------- SERVICES ---------- */
+  .services-grid{
+    display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:40px;
+  }
+  @media (max-width:860px){ .services-grid{grid-template-columns:repeat(2,1fr);} }
+  @media (max-width:560px){ .services-grid{grid-template-columns:1fr;} }
+  .service{
+    display:flex;align-items:center;gap:14px;
+    background:var(--ink-2);border:1px solid var(--line);
+    border-radius:14px;padding:18px 20px;font-size:0.98rem;
+  }
+  .service .chip{
+    width:14px;height:14px;border-radius:4px;flex:none;transform:rotate(45deg);
+  }
+  .services-foot{
+    display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;
+  }
+  .services-foot p{max-width:56ch;color:var(--paper-dim);}
+
+  /* ---------- HISTÓRIA ---------- */
+  .historia{
+    background:var(--ink-2);
+    border-radius:var(--radius);
+    padding:60px 40px;
+    margin:40px 0;
+  }
+
+  /* ---------- FUNDADOR ---------- */
+  .fundador{
+    text-align:center;
+    padding:80px 0;
+  }
+  .quote{
+    font-size:1.4rem;
+    font-style:italic;
+    color:var(--paper);
+    max-width:60ch;
+    margin:0 auto 30px;
+    line-height:1.4;
+  }
+  .author{
+    color:var(--coral);
+    font-weight:600;
+  }
+  .author-title{
+    color:var(--paper-dim);
+    font-size:0.9rem;
+    margin-top:8px;
+  }
+
+  /* ---------- REDES SOCIAIS ---------- */
+  .social-buttons{
+    display:flex;
+    gap:20px;
+    justify-content:center;
+    flex-wrap:wrap;
+    margin-top:30px;
+  }
+  .social-btn{
+    background:var(--ink-2);
+    border:1px solid var(--line);
+    padding:15px 25px;
+    border-radius:999px;
+    text-decoration:none;
+    transition:all 0.3s ease;
+  }
+  .social-btn:hover{
+    border-color:var(--coral);
+    transform:translateY(-2px);
+  }
+
+<!-- Redes Sociais - Com ícones -->
+<div class="social-links">
+  <a href="https://www.instagram.com/dumacriatividade/" target="_blank" class="social-link instagram">
+    📷 Instagram
+  </a>
+  <a href="https://x.com/Dumacriatividad" target="_blank" class="social-link twitter">
+    ✖️ Twitter
+  </a>
+</div>
+
+
+  /* ---------- FOOTER ---------- */
+  footer{
+    background:var(--ink-2);
+    padding:40px 0;
+    text-align:center;
+    border-top:1px solid var(--line);
+  }
+</style>
+</head>
+
 <body>
-    <header>
-        <h1>DUMA - A Comunidade</h1>
-        <p>Somos a Duma - A comunidade daqueles que se juntaram para entregar o melhor marketing do Brasil</p>
-        <div class="tagline"><p>Profissionais independentes unidos para entregar ideias e resultados com qualidade máxima.</p></div>
-    </header>
+  <!-- Header -->
+  <header class="site">
+    <div class="wrap">
+      <div class="logo">Du<span>ma</span></div>
+      <nav class="links">
+        <a href="#team">Equipe</a>
+        <a href="#services">Serviços</a>
+        <a href="#historia">História</a>
+        <a href="contato.html">Contato</a>
+      </nav>
+    </div>
+  </header>
 
-    <main class="container">
-        <!-- Seção 1 - Hero -->
-        <section class="hero" id="home">
-            <h2>Somos a Duma - A comunidade daqueles que se juntaram para entregar o melhor marketing do Brasil</h2>
-            <p>Somos um grupo de profissionais independentes da área do marketing que se juntaram para criar a Duma, uma comunidade colaborativa que se propõe a entregar qualquer ideia, serviço ou produto com qualidade máxima.</p>
-            <p><a class="btn" href="https://wa.me/559999999999?text=Ol%C3%A1%20Duma%2C%20gostaria%20de%20falar%20com%20um%20especialista" target="_blank" rel="noopener">Fale com um especialista no WhatsApp</a></p>
-        </section>
+  <!-- Seção 1 - Hero -->
+  <section class="hero">
+    <div class="wrap">
+      <div>
+        <div class="eyebrow">Somos a Duma</div>
+        <h1>A comunidade daqueles que se juntaram para entregar o <em>melhor marketing</em> do Brasil</h1>
+        <p class="lead">Somos um grupo de profissionais independentes da área do marketing que se juntaram para criar a Duma, uma comunidade colaborativa que se propõe a entregar qualquer ideia, serviço ou produto com qualidade máxima.</p>
+        <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+          <a href="https://wa.me/message/6BVRXSLOXBSWK1" target="_blank" class="btn btn-primary">Fale com um especialista no WhatsApp</a>
+        </div>
+      </div>
+      <div>
+        <!-- Aqui você pode adicionar uma imagem institucional -->
+        <div style="background: var(--ink-2); border-radius: var(--radius); padding: 60px; text-align: center; border: 1px solid var(--line);">
+          <p style="color: var(--paper-dim); font-size: 1.1rem;">Imagem Institucional</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <!-- Seção 2 - Nossa equipe -->
-        <section id="equipe">
-            <h2 class="section-title">Nossa equipe</h2>
-            <p style="text-align:center; color:#ddd; max-width:900px; margin:0 auto 18px">Nossa equipe é formada por Publicitários, Designers gráficos, Videomakers, Ilustradores, Animadores, Social Media, Marketeiros, Copy, Influenciadores, Fotógrafos e muitos outros. Conheça as lideranças do nosso time:</p>
+<!-- Seção 2 - Nossa Equipe -->
+<section id="team">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="eyebrow">Nossa Equipe</div>
+      <h2>Conheça as lideranças do nosso time</h2>
+      <p>Nossa equipe é formada por Publicitários, Designers gráficos, Videomakers, Ilustradores, Animadores, Social Media, Marketeiros, Copy, Influenciadores, Fotógrafos e muitos outros.</p>
+    </div>
+    
+    <div class="team-scroll">
+      
+      <!-- Robson -->
+      <div class="team-card">
+        <img src="team/robson.jpg" alt="Robson">
 
-            <div class="team-grid">
-                <div class="team-member">
-                    <img src="./robson-dezani.jpg.png" alt="Robson Dezani">
-                    <h3>Robson</h3>
-                    <p>Diretor Criativo — Cuida do conteúdo gráfico dentro e fora das redes.</p>
-                </div>
+        <h3>Robson</h3>
+        <div class="role">Diretor Criativo</div>
+        <p>Cuida do conteúdo gráfico dentro e fora das redes.</p>
+      </div>
+      
+      <!-- Igor -->
+      <div class="team-card">
+       <img src="team/Igor.jpg" alt="Igor">
 
-                <div class="team-member">
-                    <img src="./igor-richard.jpg.png" alt="Igor Richard">
-                    <h3>Igor</h3>
-                    <p>Diretor Audiovisual — Organiza a produção de vídeos em todos os formatos.</p>
-                </div>
+       <h3>Igor</h3>
+        <div class="role">Diretor Audiovisual</div>
+        <p>Organiza a produção de vídeos em todos os formatos.</p>
+      </div>
+      
+      <!-- Estela -->
+      <div class="team-card">
+        <img src="team/estela.jpg+(2).jpg" alt="Estela">
 
-                <div class="team-member">
-                    <img src="./estela-freire.jpg" alt="Estela Freire">
-                    <h3>Estela</h3>
-                    <p>Diretora de Social Media — Planejamento estratégico de conteúdo.</p>
-                </div>
+        <h3>Estela</h3>
+        <div class="role">Diretora de Social Media</div>
+        <p>Planejamento estratégico de conteúdo.</p>
+      </div>
+      
+      <!-- Bruno -->
+      <div class="team-card">
+        <img src="team/bruno.jpg+(1).jpg" alt="Bruno">
 
-                <div class="team-member">
-                    <img src="./bruno-henrique.jpg" alt="Bruno Henrique">
-                    <h3>Bruno</h3>
-                    <p>Diretor de Tecnologia — Organiza o desenvolvimento de Software.</p>
-                </div>
+        <h3>Bruno</h3>
+        <div class="role">Diretor de Tecnologia</div>
+        <p>Organiza o desenvolvimento de Software.</p>
+      </div>
+      
+      <!-- Sabrina -->
+      <div class="team-card">
+        <img src="team/sabrina.jpg+(2).jpg" alt="Sabrina">
 
-                <div class="team-member">
-                    <img src="./gabriel-renato.jpg" alt="Gabriel Renato">
-                    <h3>Gabriel</h3>
-                    <p>Diretor Editorial — Roteiros, conteúdo e comunicação.</p>
-                </div>
+        <h3>Sabrina</h3>
+        <div class="role">Desenvolvedora de Software</div>
+        <p>Especialista em desenvolvimento e soluções tecnológicas inovadoras.</p>
+      </div>
+      
+      <!-- Itamar -->
+      <div class="team-card">
+        <img src="team/itamar.jpg+(1).jpg" alt="Itamar">
 
-                <div class="team-member">
-                    <img src="./jeterson-santos.jpg" alt="Jeterson Santos">
-                    <h3>Jeterson</h3>
-                    <p>Diretor Operacional — Gestão de time, equipe e posicionamento.</p>
-                </div>
+        <h3>Itamar</h3>
+        <div class="role">Diretor Comercial</div>
+        <p>Responsável por estratégias comerciais e relacionamento com clientes.</p>
+      </div>
+      
+      <!-- Gabriel -->
+      <div class="team-card">
+        <img src="team/gabriel.jpg+(1).jpg" alt="Gabriel">
 
-                <div class="team-member">
-                    <img src="./sabrina-ribeiro.jpg" alt="Sabrina Ribeiro">
-                    <h3>Sabrina</h3>
-                    <p>Desenvolvedora / Suporte Técnico</p>
-                </div>
+        <h3>Gabriel</h3>
+        <div class="role">Diretor Editorial</div>
+        <p>Roteiros, conteúdo e comunicação.</p>
+      </div>
+      
+      <!-- Jeterson -->
+      <div class="team-card">
+        <img src="team/jeterson.jpg+(1).jpg" alt="Jeterson">
 
-                <div class="team-member">
-                    <img src="./itamar-barbosa.jpg" alt="Itamar Barbosa">
-                    <h3>Itamar</h3>
-                    <p>Diretor Comercial</p>
-                </div>
-            </div>
+       <h3>Jeterson</h3>
+        <div class="role">Diretor Operacional</div>
+        <p>Gestão de time, equipe e posicionamento.</p>
+      </div>
+      
+    </div>
+    
+    <div class="team-outro">
+      <p>Nossa equipe é composta por vários profissionais com especializações diferentes, prontos pra atender sua demanda agora mesmo!</p>
+      <a href="https://wa.me/message/6BVRXSLOXBSWK1" target="_blank" class="btn btn-primary">Conta pra gente do que precisa</a>
+    </div>
+  </div>
+</section>
 
-            <p style="text-align:center; margin-top:18px; color:#ddd">Nossa equipe é composta por vários profissionais com especializações diferentes, prontos pra atender sua demanda agora mesmo!</p>
-            <p style="text-align:center; margin-top:12px"><a class="btn" href="#contato">Conta pra gente do que precisa</a></p>
-        </section>
+<!-- Seção - Identidade Visual com Background -->
+<section class="paleta-section" style="background-image: url('images/paleta-cores.jpg'); background-size: cover; background-position: center; background-attachment: fixed; position: relative; min-height: 400px;">
+  
+  <!-- Overlay escuro para melhor legibilidade -->
+  <div style="background: rgba(22,18,32,0.75); backdrop-filter: blur(2px); padding: 100px 0; position: relative; z-index: 2;">
+    <div class="wrap">
+      <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+        
+        <div class="eyebrow" style="color: var(--paper);">Nossa Identidade</div>
+        <h2 style="color: var(--paper); font-size: clamp(2rem, 4vw, 3rem); margin: 20px 0;">Cores que Definem Nossa Essência</h2>
+        <p style="color: var(--paper-dim); font-size: 1.1rem; line-height: 1.6;">
+          Cada cor em nossa paleta representa um aspecto da nossa filosofia: criatividade, inovação, confiança e resultados excepcionais.
+        </p>
+        
+        <div style="margin-top: 40px;">
+          <a href="https://wa.me/message/6BVRXSLOXBSWK1" target="_blank" class="btn btn-primary">
+            Vamos Criar Juntos
+          </a>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+  
+  <!-- Efeito de gradiente nas bordas -->
+  <div style="position: absolute; top: 0; left: 0; right: 0; height: 50px; background: linear-gradient(to bottom, var(--ink), transparent); z-index: 1;"></div>
+  <div style="position: absolute; bottom: 0; left: 0; right: 0; height: 50px; background: linear-gradient(to top, var(--ink), transparent); z-index: 1;"></div>
+  
+</section>
 
-        <!-- Seção 3 - Serviços -->
-        <section id="servicos" style="margin-top:40px">
-            <h2 class="section-title">Alguns serviços que você pode encontrar com a gente</h2>
-            <ul class="services-list">
-                <li>Gestão de rede social</li>
-                <li>Creativos para campanhas</li>
-                <li>Edição de vídeo</li>
-                <li>Design de produtos</li>
-                <li>Criação de site ou aplicativo</li>
-                <li>Tráfego pago</li>
-                <li>Criar campanhas do absoluto zero</li>
-                <li>Branding e posicionamento de marca</li>
-                <li>Identidade visual</li>
-            </ul>
 
-            <p style="text-align:center; color:#ddd; margin-top:16px; max-width:900px; margin-left:auto; margin-right:auto">Nossos serviços podem ser feitos por um ou vários profissionais preparados para garantir performance e resultado. Fala pra gente qual seu projeto e vamos desenhar uma forma de torná-lo ainda mais lucrativo.</p>
-            <p style="text-align:center; margin-top:12px"><a class="btn" href="#contato">Quero dar esse passo</a></p>
-        </section>
+  <!-- Seção 3 - Serviços -->
+  <section id="services">
+    <div class="wrap">
+      <div class="section-head">
+        <h2>Alguns serviços que você pode encontrar com a gente:</h2>
+      </div>
+      
+      <div class="services-grid">
+        <div class="service">
+          <div class="chip" style="background: var(--coral);"></div>
+          <span>Gestão de rede social</span>
+        </div>
+        <div class="service">
+          <div class="chip" style="background: var(--gold);"></div>
+          <span>Criativos para campanhas</span>
+        </div>
+        <div class="service">
+          <div class="chip" style="background: var(--teal);"></div>
+          <span>Edição de vídeo</span>
+        </div>
+        <div class="service">
+          <div class="chip" style="background: var(--coral);"></div>
+          <span>Design de produtos</span>
+        </div>
+        <div class="service">
+          <div class="chip" style="background: var(--gold);"></div>
+          <span>Criação de site ou aplicativo</span>
+        </div>
+        <div class="service">
+          <div class="chip" style="background: var(--teal);"></div>
+          <span>Tráfego pago</span>
+        </div>
+        <div class="service">
+          <div class="chip" style="background: var(--coral);"></div>
+          <span>Criar campanhas do absoluto zero</span>
+        </div>
+        <div class="service">
+          <div class="chip" style="background: var(--gold);"></div>
+          <span>Branding e posicionamento de marca</span>
+        </div>
+        <div class="service">
+          <div class="chip" style="background: var(--teal);"></div>
+          <span>Identidade visual</span>
+        </div>
+      </div>
+      
+      <div class="services-foot">
+        <p>Nossos serviços podem ser feitos por um ou vários profissionais preparados para garantir performance e resultado. Fala pra gente qual seu projeto e vamos desenhar uma forma de torná-lo ainda mais lucrativo.</p>
+        <a href="https://wa.me/message/6BVRXSLOXBSWK1" target="_blank" class="btn btn-primary">Quero dar esse passo</a>
+      </div>
+    </div>
+  </section>
 
-        <!-- Seção 4 - Nossa história -->
-        <section id="historia" style="margin-top:40px">
-            <h2 class="section-title">Nossa história</h2>
-            <div class="history">
-                <div style="flex:1; min-width:260px">
-                    <p style="color:#ddd; line-height:1.6">Fomos fundados para juntar todo o conhecimento do que há de melhor no marketing para fazer duas coisas principais: valorizar o pensamento humano capaz de pensar e criar projetos incríveis; e entregar essas ideias com a maior qualidade possível, juntando o que há de melhor no mercado. Hoje somos uma plataforma sólida tanto na entrega de conteúdo relevante quanto na execução eficiente, ajudando empresas, negócios, projetos e pessoas a atingirem seus objetivos.</p>
-                </div>
-                <div style="flex:1; min-width:260px">
-                    <!-- imagem institucional: usar jeterson caso não haja foto institucional -->
-                    <img src="./jeterson-santos.jpg" alt="Foto institucional Duma">
-                </div>
-            </div>
-        </section>
+<!-- Seção - Contato WhatsApp + Formulário -->
+<section id="contato" style="background: var(--ink-2);">
+  <div class="wrap">
+    <div class="section-head" style="text-align: center;">
+      <div class="eyebrow">Fale Conosco</div>
+      <h2>Vamos Conversar Sobre Seu Projeto</h2>
+      <p>Escolha a forma mais conveniente para entrar em contato conosco. Estamos prontos para transformar suas ideias em realidade!</p>
+    </div>
 
-        <!-- Seção 5 - Mensagem do fundador -->
-        <section id="fundador" style="margin-top:40px">
-            <h2 class="section-title">Mensagem do fundador</h2>
-            <blockquote>
-                "Sou um entusiasta do pensamento humano, acredito que ideias valiosas merecem serem vistas e que todo ser humano é capaz de impactar o mundo quando se propõe a pensar e tem gente junto que acredita. É isso que construímos aqui na Duma."
-                <br><br>
-                <strong>Jeterson Santos</strong><br>
-                Fundador e Diretor Operacional da Duma.
-            </blockquote>
-        </section>
+    <div class="contact-grid">
+      
+      <!-- WhatsApp Direto -->
+      <div class="contact-card whatsapp-card">
+        <div class="contact-icon">📱</div>
+        <h3>WhatsApp Direto</h3>
+        <p>Resposta rápida e atendimento personalizado para seu projeto.</p>
+        <a href="https://wa.me/message/6BVRXSLOXBSWK1" target="_blank" class="btn btn-whatsapp">
+          Chamar no WhatsApp
+        </a>
+        <div class="contact-info">
+          <small>Horário: Segunda a Sexta, 9h às 18h</small>
+        </div>
+      </div>
 
-        <!-- Seção 6 - Portfólio -->
-        <section id="portfolio" style="margin-top:40px">
-            <h2 class="section-title">Conheça nosso trabalho mais de perto</h2>
-            <p style="text-align:center; color:#ddd; max-width:900px; margin:0 auto 12px">Se você quiser avaliar as dezenas de ações que fizemos e levaram ideias rumo aos seus objetivos, clique no botão abaixo e te enviaremos um panorama completo da nossa qualidade de execução e nosso serviço.</p>
-            <p style="text-align:center;"><a class="btn" href="mailto:contato@duma.com.br?subject=Quero%20ver%20o%20portf%C3%B3lio">Quero ver essas possibilidades</a></p>
-        </section>
+      <!-- Formulário que vai para WhatsApp -->
+      <div class="contact-card form-card">
+        <div class="contact-icon">✉️</div>
+        <h3>Formulário Rápido</h3>
+        <p>Preencha e enviaremos direto para nosso WhatsApp!</p>
+        
+        <form class="contact-form" id="whatsappForm">
+          <div class="form-group">
+            <input type="text" name="nome" id="nome" placeholder="Seu nome completo" required>
+          </div>
+          
+          <div class="form-group">
+            <input type="email" name="email" id="email" placeholder="Seu melhor e-mail" required>
+          </div>
+          
+          <div class="form-group">
+            <input type="tel" name="telefone" id="telefone" placeholder="Seu WhatsApp (opcional)">
+          </div>
+          
+          <div class="form-group">
+            <select name="servico" id="servico" required>
+              <option value="">Que tipo de projeto você tem?</option>
+              <option value="Identidade Visual / Branding">Identidade Visual / Branding</option>
+              <option value="Social Media">Social Media</option>
+              <option value="Produção de Vídeo">Produção de Vídeo</option>
+              <option value="Website / E-commerce">Website / E-commerce</option>
+              <option value="Marketing Digital">Marketing Digital</option>
+              <option value="Outro projeto">Outro projeto</option>
+            </select>
+          </div>
+          
+          <div class="form-group">
+            <textarea name="mensagem" id="mensagem" placeholder="Conte mais sobre seu projeto, objetivos e prazos..." rows="4" required></textarea>
+          </div>
+          
+          <button type="submit" class="btn btn-primary btn-full">
+            Enviar via WhatsApp
+          </button>
+        </form>
+      </div>
 
-        <!-- Seção 7 - Redes sociais -->
-        <section id="redes" style="margin-top:40px">
-            <h2 class="section-title">Nos acompanhe nas redes sociais</h2>
-            <p style="text-align:center; color:#ddd; margin-bottom:12px">Trazemos conteúdo atualizado todo dia pra te ajudar nessa jornada.</p>
-            <div class="socials">
-                <a class="btn" href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a>
-                <a class="btn" href="https://www.tiktok.com/" target="_blank" rel="noopener">TikTok</a>
-                <a class="btn" href="https://wa.me/559999999999" target="_blank" rel="noopener">WhatsApp</a>
-            </div>
-        </section>
+    </div>
 
-        <!-- Contato / Formulário -->
-        <section id="contato" style="margin-top:40px">
-            <h2 class="section-title">Fale com a Duma</h2>
-            <p style="text-align:center; color:#ddd; max-width:900px; margin:0 auto 12px">Preencha o formulário abaixo ou clique no WhatsApp para falar diretamente com um especialista.</p>
+    <!-- Outras formas de contato -->
+    <div class="contact-extras">
+      <div class="contact-item">
+        <strong>📧 E-mail:</strong>
+        <a href="mailto:contato@dumaagencia.com">contato@dumaagencia.com</a>
+      </div>
+      
+      <div class="contact-item">
+        <strong>📍 Localização:</strong>
+        <span>Atendimento em todo Brasil (remoto)</span>
+      </div>
+      
+      <div class="contact-item social-links">
+        <strong>🌐 Redes Sociais:</strong>
+        <a href="https://instagram.com/dumaagencia" target="_blank">Instagram</a>
+        <a href="https://twitter.com/dumaagencia" target="_blank">Twitter</a>
+      </div>
+    </div>
 
-            <div class="contact-form">
-                <form id="contactForm" onsubmit="return sendMail();">
-                    <div class="form-row">
-                        <input type="text" id="name" placeholder="Seu nome" required>
-                        <input type="email" id="email" placeholder="Seu e-mail" required>
-                    </div>
-                    <div class="form-row">
-                        <input type="text" id="company" placeholder="Empresa (opcional)">
-                        <input type="text" id="phone" placeholder="Telefone / WhatsApp (opcional)">
-                    </div>
-                    <div class="form-row">
-                        <textarea id="message" placeholder="Conte pra gente do que precisa" required></textarea>
-                    </div>
-                    <div style="text-align:center; margin-top:8px">
-                        <button class="btn" type="submit">Enviar mensagem</button>
-                    </div>
-                    <p class="note">Obs: este formulário abre seu cliente de e-mail com os dados preenchidos. Substitua <strong>contato@duma.com.br</strong> pelo e-mail real no código se desejar envio direto por servidor.</p>
-                </form>
-            </div>
-        </section>
+  </div>
+</section>
 
-    </main>
+  <!-- Seção 4 - Nossa História -->
+  <section id="historia">
+    <div class="wrap">
+      <div class="historia">
+        <div class="section-head">
+          <h2>Nossa história</h2>
+          <p>Fomos fundados para juntar todo o conhecimento do que há de melhor no marketing para fazer duas coisas principais:</p>
+        </div>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin: 40px 0;">
+          <div>
+            <h3 style="color: var(--coral); margin-bottom: 16px;">Valorizar o pensamento humano</h3>
+            <p>Capaz de pensar e criar projetos incríveis.</p>
+          </div>
+          <div>
+            <h3 style="color: var(--gold); margin-bottom: 16px;">Entregar com qualidade máxima</h3>
+            <p>Juntando o que há de melhor no mercado.</p>
+          </div>
+        </div>
+        
+        <p style="margin-top: 30px;">Hoje somos uma plataforma sólida tanto na entrega de conteúdo relevante quanto na execução eficiente, ajudando empresas, negócios, projetos e pessoas a atingirem seus objetivos.</p>
+      </div>
+    </div>
+  </section>
 
-    <footer>
-        <p>Duma - A plataforma que conecta pessoas e ideias e se importa com isso!</p>
-        <p style="font-size:0.8rem; color:#ddd; margin-top:8px">© 2026 DUMA Community</p>
-    </footer>
+  <!-- Seção 5 - Mensagem do Fundador -->
+  <section class="fundador">
+    <div class="wrap">
+      <div class="quote">
+        "Sou um entusiasta do pensamento humano, acredito que ideias valiosas merecem serem vistas e que todo ser humano é capaz de impactar o mundo quando se propõe a pensar e tem gente junto que acredita. É isso que construímos aqui na Duma."
+      </div>
+      <div class="author">Jeterson Santos</div>
+      <div class="author-title">Fundador e Diretor Operacional da Duma</div>
+    </div>
+  </section>
 
-    <script>
-        function sendMail(){
-            var name = encodeURIComponent(document.getElementById('name').value);
-            var email = encodeURIComponent(document.getElementById('email').value);
-            var company = encodeURIComponent(document.getElementById('company').value);
-            var phone = encodeURIComponent(document.getElementById('phone').value);
-            var message = encodeURIComponent(document.getElementById('message').value);
-            var subject = encodeURIComponent('Contato pelo site: ' + name);
-            var body = 'Nome: ' + name + '\nEmail: ' + email + '\nEmpresa: ' + company + '\nTelefone: ' + phone + '\n\nMensagem:\n' + message;
-            var mailto = 'mailto:contato@duma.com.br?subject=' + subject + '&body=' + encodeURIComponent(body);
-            window.location.href = mailto;
-            return false; // prevent actual form submit
-        }
-    </script>
+  <!-- Seção 6 - Portfólio -->
+  <section>
+    <div class="wrap">
+      <div class="section-head" style="text-align: center;">
+        <h2>Conheça nosso trabalho mais de perto</h2>
+        <p>Se você quiser avaliar as dezenas de ações que fizemos e levaram ideias rumo aos seus objetivos, clique no botão abaixo e te enviaremos um panorama completo da nossa qualidade de execução e nosso serviço.</p>
+        <div style="margin-top: 30px;">
+          <a href="https://wa.me/message/6BVRXSLOXBSWK1" target="_blank" class="btn btn-primary">Quero ver essas possibilidades</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Seção 7 - Redes Sociais -->
+  <section>
+    <div class="wrap">
+      <div class="section-head" style="text-align: center;">
+        <h2>Nos acompanhe nas redes sociais</h2>
+        <p>Trazemos conteúdo atualizado todo dia pra te ajudar nessa jornada.</p>
+        
+        <div class="social-buttons">
+          <a href="#" class="social-btn">📱 Instagram</a>
+          <a href="#" class="social-btn">🎵 TikTok</a>
+          <a href="https://wa.me/message/6BVRXSLOXBSWK1" target="_blank" class="social-btn">💬 WhatsApp</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Rodapé -->
+  <footer>
+    <div class="wrap">
+      <p>Duma - A plataforma que conecta pessoas e ideias e se importa com isso!</p>
+    </div>
+  </footer>
+
+  <!-- WhatsApp Widget -->
+  <a href="https://wa.me/message/6BVRXSLOXBSWK1" target="_blank" class="whatsapp-btn">
+    📱 WhatsApp
+  </a>
+
 </body>
 </html>
